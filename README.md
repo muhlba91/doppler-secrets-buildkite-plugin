@@ -7,7 +7,7 @@
 
 A [Buildkite plugin](https://buildkite.com/docs/agent/v3/plugins) for exposing secrets from [Doppler](http://doppler.com) to your build steps.
 
-**Plugin State**: Alpha
+**Plugin State**: Beta
 
 ---
 
