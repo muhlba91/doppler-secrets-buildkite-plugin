@@ -45,7 +45,7 @@ steps:
     plugins:
       - muhlba91/doppler-secrets#v0.0.0:
           project: project
-          config: prod
+          project-config: prod
 ```
 
 If you want to control what secrets are being exposed you can specify the `variables` parameter:
@@ -55,7 +55,7 @@ steps:
   - command: "echo $MY_SECRET"
     plugins:
       - muhlba91/doppler-secrets#v0.0.0:
-          variables:
+          secrets:
             - MY_SECRET
 ```
 
