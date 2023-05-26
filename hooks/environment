@@ -1,0 +1,49 @@
+#!/bin/bash
+
+set -eo pipefail
+
+# input variables
+readonly buildkite_token="${BUILDKITE_PLUGIN_DOPPLER_SECRETS_TOKEN:-${DOPPLER_TOKEN}}"
+readonly project="${BUILDKITE_PLUGIN_DOPPLER_SECRETS_PROJECT:-}"
+readonly project_config="${BUILDKITE_PLUGIN_DOPPLER_SECRETS_PROJECT_CONFIG:-}"
+readonly variables="${BUILDKITE_PLUGIN_DOPPLER_SECRETS_SECRETS:-}"
+
+# exports the given secrets
+export_secrets() {
+  set -o allexport
+  while IFS= read -r line; do
+    export ${line}
+  done <<< $@
+  set +o allexport
+}
+
+# adds the project and config parameters
+add_project_config() {
+  cmd="$@"
+  [ ! -z "${project}" ] && cmd="${cmd} --project ${project}"
+  [ ! -z "${project_config}" ] && cmd="${cmd} --config ${project_config}"
+}
+
+# secrets to be set as environment variables
+secrets=""
+
+# either retrieve requested secrets,
+# or download all in env format
+if [ ! -z "${variables}" ]; then
+  for var in ${variables}; do
+    # build doppler command to download the privided secrets
+    cmd="doppler secrets get ${var} --plain"
+    add_project_config ${cmd}
+
+    secrets="${secrets}
+${var}=\"$(${cmd})\""
+  done
+else
+  # build doppler command to download all secrets
+  cmd="doppler secrets download --no-file --format env"
+  add_project_config ${cmd}
+
+  secrets=$(${cmd})
+fi
+
+export_secrets ${secrets}
