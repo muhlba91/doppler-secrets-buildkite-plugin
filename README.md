@@ -3,6 +3,7 @@
 [![Build status](https://img.shields.io/github/actions/workflow/status/muhlba91/doppler-secrets-buildkite-plugin/pipeline?style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/actions/workflows/pipeline.yml)
 [![Release](https://img.shields.io/github/v/release/muhlba91/doppler-secrets-buildkite-plugin?sort=semver&style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/releases)
 [![Release date](https://img.shields.io/github/release-date/muhlba91/doppler-secrets-buildkite-plugin?style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/releases)
+[![License](https://img.shields.io/github/license/muhlba91/doppler-secrets-buildkite-plugin?style=for-the-badge)](LICENSE.md)
 <a href="https://www.buymeacoffee.com/muhlba91" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="28" width="150"></a>
 
 A [Buildkite plugin](https://buildkite.com/docs/agent/v3/plugins) for exposing secrets from [Doppler](http://doppler.com) to your build steps.
