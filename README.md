@@ -24,7 +24,7 @@ The Service Token is set on the runner through the enviroment variable [`DOPPLER
 steps:
   - command: "echo $MY_SECRET"
     plugins:
-      - doppler-secrets#v0.0.0
+      - muhlba91/doppler-secrets#v0.0.0
 ```
 
 You can also directly specify the token (insecure!):
@@ -33,7 +33,7 @@ You can also directly specify the token (insecure!):
 steps:
   - command: "echo $MY_SECRET"
     plugins:
-      - doppler-secrets#v0.0.0:
+      - muhlba91/doppler-secrets#v0.0.0:
           token: dp.XXX
 ```
 
@@ -43,7 +43,7 @@ Personal Tokens are also supported but require setting `project` and `config`:
 steps:
   - command: "echo $MY_SECRET"
     plugins:
-      - doppler-secrets#v0.0.0:
+      - muhlba91/doppler-secrets#v0.0.0:
           project: project
           config: prod
 ```
@@ -54,7 +54,7 @@ If you want to control what secrets are being exposed you can specify the `varia
 steps:
   - command: "echo $MY_SECRET"
     plugins:
-      - doppler-secrets#v0.0.0:
+      - muhlba91/doppler-secrets#v0.0.0:
           variables:
             - MY_SECRET
 ```
