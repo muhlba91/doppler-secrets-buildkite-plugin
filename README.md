@@ -1,6 +1,6 @@
 # Doppler Secrets Buildkite Plugin
 
-[![Build status](https://img.shields.io/github/actions/workflow/status/muhlba91/doppler-secrets-buildkite-plugin/pipeline?style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/actions/workflows/pipeline.yml)
+[![Build status](https://img.shields.io/github/actions/workflow/status/muhlba91/doppler-secrets-buildkite-plugin/pipeline.yml?style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/actions/workflows/pipeline.yml)
 [![Release](https://img.shields.io/github/v/release/muhlba91/doppler-secrets-buildkite-plugin?sort=semver&style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/releases)
 [![Release date](https://img.shields.io/github/release-date/muhlba91/doppler-secrets-buildkite-plugin?style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/releases)
 [![License](https://img.shields.io/github/license/muhlba91/doppler-secrets-buildkite-plugin?style=for-the-badge)](LICENSE.md)
