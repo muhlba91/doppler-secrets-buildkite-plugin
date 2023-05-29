@@ -6,24 +6,9 @@ on:
     paths:
       - "hooks/**"
       - "plugin.yml"
-  pull_request:
   workflow_dispatch:
 
 jobs:
-  conform:
-    runs-on: ubuntu-latest
-    name: Conform
-
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Conform
-        uses: siderolabs/conform@v0.1.0-alpha.27
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
   validate:
     runs-on: ubuntu-latest
     name: Validate Plugin
@@ -44,7 +29,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Release
     needs:
-      - conform
       - validate
     strategy:
       max-parallel: 4

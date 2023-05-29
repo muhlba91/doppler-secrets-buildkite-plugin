@@ -3,6 +3,7 @@ name: Conform
 
 on:
   push:
+  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -19,3 +20,19 @@ jobs:
         uses: siderolabs/conform@v0.1.0-alpha.27
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
+  validate:
+    runs-on: ubuntu-latest
+    name: Validate Plugin
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: addnab/docker-run-action@v3
+        with:
+          image: buildkite/plugin-linter
+          options: -v ${{ github.workspace }}:/plugin
+          run: |
+            lint --id muhlba91/doppler-secrets
