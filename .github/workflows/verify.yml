@@ -1,5 +1,5 @@
 ---
-name: Conform
+name: Verify
 
 on:
   push:
