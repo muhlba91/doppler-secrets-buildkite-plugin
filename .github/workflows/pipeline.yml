@@ -28,6 +28,9 @@ jobs:
   release:
     runs-on: ubuntu-latest
     name: Release
+    permissions:
+      id-token: write
+      contents: write
     needs:
       - validate
     strategy:
