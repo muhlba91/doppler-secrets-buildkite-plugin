@@ -1,0 +1,28 @@
+---
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    name: Release
+    outputs:
+      release_created: ${{ steps.release.outputs.releases_created }}
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          command: manifest

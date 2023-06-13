@@ -1,6 +1,6 @@
 # Doppler Secrets Buildkite Plugin
 
-[![Build status](https://img.shields.io/github/actions/workflow/status/muhlba91/doppler-secrets-buildkite-plugin/pipeline.yml?style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/actions/workflows/pipeline.yml)
+[![Build status](https://img.shields.io/github/actions/workflow/status/muhlba91/doppler-secrets-buildkite-plugin/verify.yml?style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/actions/workflows/verify.yml)
 [![Release](https://img.shields.io/github/v/release/muhlba91/doppler-secrets-buildkite-plugin?sort=semver&style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/releases)
 [![Release date](https://img.shields.io/github/release-date/muhlba91/doppler-secrets-buildkite-plugin?style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/releases)
 [![License](https://img.shields.io/github/license/muhlba91/doppler-secrets-buildkite-plugin?style=for-the-badge)](LICENSE.md)
@@ -21,44 +21,52 @@ The [`doppler` CLI](https://docs.doppler.com/docs/cli#installation) must be inst
 The following pipeline uses a [Service Token](https://docs.doppler.com/docs/service-tokens) to set all secrets as environment variables.
 The Service Token is set on the runner through the enviroment variable [`DOPPLER_TOKEN`](https://docs.doppler.com/docs/service-tokens#option-2-the-doppler_token-environment-variable).
 
+<!-- x-release-please-start-version -->
 ```yml
 steps:
   - command: "echo $MY_SECRET"
     plugins:
-      - muhlba91/doppler-secrets#v0.0.0
+      - muhlba91/doppler-secrets#v1.1.0
 ```
+<!-- x-release-please-end -->
 
 You can also directly specify the token (insecure!):
 
+<!-- x-release-please-start-version -->
 ```yml
 steps:
   - command: "echo $MY_SECRET"
     plugins:
-      - muhlba91/doppler-secrets#v0.0.0:
+      - muhlba91/doppler-secrets#v1.1.0:
           token: dp.XXX
 ```
+<!-- x-release-please-end -->
 
 Personal Tokens are also supported but require setting `project` and `config`:
 
+<!-- x-release-please-start-version -->
 ```yaml
 steps:
   - command: "echo $MY_SECRET"
     plugins:
-      - muhlba91/doppler-secrets#v0.0.0:
+      - muhlba91/doppler-secrets#v1.1.0:
           project: project
           project-config: prod
 ```
+<!-- x-release-please-end -->
 
 If you want to control what secrets are being exposed you can specify the `variables` parameter:
 
+<!-- x-release-please-start-version -->
 ```yml
 steps:
   - command: "echo $MY_SECRET"
     plugins:
-      - muhlba91/doppler-secrets#v0.0.0:
+      - muhlba91/doppler-secrets#v1.1.0:
           secrets:
             - MY_SECRET
 ```
+<!-- x-release-please-end -->
 
 ### Warning
 
