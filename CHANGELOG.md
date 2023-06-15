@@ -1,6 +1,15 @@
 # Changelog
 
 
+## [1.1.1](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/compare/v1.1.0...v1.1.1) (2023-06-15)
+
+
+### Miscellaneous Chores
+
+* **ci:** fix release-please commit message ([a5383c0](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/commit/a5383c056edb63c792207bfc07180f8376a90d20))
+* **ci:** update release-plese config ([8130070](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/commit/813007057aa85ccff204a628d803c35c4802ddec))
+* replace standard-version with release-please ([7ca6abf](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/commit/7ca6abfe119c1071c7276d793126ee82ff58970f))
+
 ## 1.1.0 (2023-06-04)
 
 
