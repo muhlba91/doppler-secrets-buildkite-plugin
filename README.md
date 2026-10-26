@@ -1,5 +1,8 @@
 # Doppler Secrets Buildkite Plugin
 
+> [!WARNING]
+> **This repository is deprecated!**
+
 [![Build status](https://img.shields.io/github/actions/workflow/status/muhlba91/doppler-secrets-buildkite-plugin/verify.yml?style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/actions/workflows/verify.yml)
 [![Release](https://img.shields.io/github/v/release/muhlba91/doppler-secrets-buildkite-plugin?sort=semver&style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/releases)
 [![Release date](https://img.shields.io/github/release-date/muhlba91/doppler-secrets-buildkite-plugin?style=for-the-badge)](https://github.com/muhlba91/doppler-secrets-buildkite-plugin/releases)
